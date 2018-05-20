@@ -1,0 +1,9 @@
+{{!< default}}
+{{!-- The main content area --}}
+<div class="gallery__feed">
+    {{#get "posts" filter="page:true+tags:['gallery']"}}
+        {{#foreach posts}}
+            {{> "gallery-card"}}
+        {{/foreach}}
+    {{/get}}
+</div>

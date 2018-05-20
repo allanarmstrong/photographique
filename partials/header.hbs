@@ -1,0 +1,9 @@
+<header class="header">
+  <h1><a class="header__logo" href="{{@blog.url}}" title="{{@blog.title}}">{{@blog.title}}</a></h1>
+  <nav class="navigation">
+    {{"navigation"}}
+  </nav>
+  {{#is "home"}}
+    <div class="header__gallery-title"></div>
+  {{/is}}
+</header>

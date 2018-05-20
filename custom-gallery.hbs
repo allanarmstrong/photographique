@@ -1,0 +1,23 @@
+{{!< default}}
+{{#post}}
+<section class="gallery {{post_class}}">
+  <div class="gallery__sidebar">
+    <a href="{{url}}" title="{{title}}"><h2 class="gallery__title">{{title}}</h2></a>
+    <div class="gallery__story">
+      {{content}}
+    </div>
+  </div>
+  <div class="images">
+    {{#get "posts" filter="tags:['{{slug}}']" include="tags" order="published_at asc"}}
+      {{#foreach posts}}
+        <div class="gallery-post">
+          <h3 class="gallery-post__title">{{title}}</h3>
+          <div class="gallery-post__content">
+            {{content}}
+          </div>
+        </div>
+      {{/foreach}}
+    {{/get}}
+  </div>
+</section>
+{{/post}}

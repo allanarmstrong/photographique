@@ -1,0 +1,13 @@
+{{!< default}}
+
+{{#post}}
+  <article class="post {{post_class}}">
+    <div class="post__header" {{#if feature_image}} style="background-image:url('{{feature_image}}')"{{/if}}>
+    <h2 class="post__title">{{title}}</h2>
+    </div>
+    <div class="post__content">
+      <time class="post__date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+      {{content}}
+    </div>
+  </article>
+{{/post}}

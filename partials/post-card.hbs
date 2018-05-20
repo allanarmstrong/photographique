@@ -1,0 +1,11 @@
+<article class="post-card" data-post-title="{{title}}">
+  <a href="{{url}}">
+    {{#if feature_image}}
+      <img src="{{feature_image}}" alt="{{title}}" class="post-card__image">
+    {{/if}}
+    <div class="card__overlay">
+      <h2 class="post__title">{{title}}</h2>
+      <time class="post__date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+    </div>
+  </a>
+</article>

@@ -1,0 +1,12 @@
+{{!< default}}
+  {{#post}}
+  <div class="blog">
+    <div class="blog__posts">
+      {{#get "posts" filter="tags:['blog-post']"}}
+          {{#foreach posts}}
+              {{> "post-card"}}
+          {{/foreach}}
+      {{/get}}
+    </div>
+  </div>
+  {{/post}}
